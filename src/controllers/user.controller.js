@@ -27,7 +27,7 @@ const update = catchError(async(req,res) => {
         {first_name, last_name, email, password, birthday},
         {where: {id}, returning: true}
     );
-    return res.json(user)
+    return res.json(user[1][0])
 });
 
 
